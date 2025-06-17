@@ -87,7 +87,7 @@ root = ctk.CTk()
 root.title("Mitarbeiterumfrage")
 root.geometry("1200x800")
 
-bg_image = Image.open("/Users/vollmer/Desktop/Studium/HM/Semester 5/Modul 2.5/VS Studio Code/Version 1.png")
+bg_image = Image.open("Ablage in lokaler Datei.png")
 bg_photo = ImageTk.PhotoImage(bg_image)
 
 background_label = ctk.CTkLabel(root, image=bg_photo, text="", fg_color="transparent")
