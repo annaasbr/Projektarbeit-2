@@ -488,6 +488,10 @@ def AuswertungAnzeigen():
         }
 
         # Matplotlib Figure erstellen
+        # Ampelanzeige für jede Kategorie
+AmpelAnzeigenKategorie(frameAuswertung, sum(kategorie1_durchschnitt.values()) / len(kategorie1_durchschnitt), "Kategorie 1")
+AmpelAnzeigenKategorie(frameAuswertung, sum(kategorie2_durchschnitt.values()) / len(kategorie2_durchschnitt), "Kategorie 2")
+AmpelAnzeigenKategorie(frameAuswertung, sum(kategorie3_durchschnitt.values()) / len(kategorie3_durchschnitt), "Kategorie 3")
         fig, axes = plt.subplots(2, 2, figsize=(12, 8))
         fig.suptitle(f'Auswertung der Mitarbeiterumfrage - {len(Antworten)} Teilnehmer', fontsize=16, fontweight='bold')
         
@@ -580,6 +584,24 @@ def AuswertungAnzeigen():
         info_label = ctk.CTkLabel(frameAuswertung, text=info_text, font=ctk.CTkFont(size=12), 
                                  wraplength=800)
         info_label.pack(pady=(10, 10))
+                # --- Ampelanzeige je nach Gesamtdurchschnitt ---
+        ampelFarbe = "grey"
+        if overall_avg <= 2:
+            ampelFarbe = "red"
+        elif overall_avg < 5:
+            ampelFarbe = "yellow"
+        else:
+            ampelFarbe = "green"
+
+        ampel_canvas = ctk.CTkCanvas(frameAuswertung, width=60, height=180, bg="white", highlightthickness=0)
+        ampel_canvas.pack(pady=(10, 10))
+
+        # Drei Kreise für die Ampel
+        # Rot oben, Gelb Mitte, Grün unten
+        ampel_canvas.create_oval(10, 10, 50, 50, fill="red"   if ampelFarbe=="red"   else "#550000", outline="")
+        ampel_canvas.create_oval(10, 65, 50, 105, fill="yellow" if ampelFarbe=="yellow" else "#555500", outline="")
+        ampel_canvas.create_oval(10, 120, 50, 160, fill="green" if ampelFarbe=="green" else "#003300", outline="")
+        ampel_canvas.create_text(30, 170, text="Ampel", font=("Arial", 10))
         
         # Buttons für verschiedene Ansichten
         button_frame = ctk.CTkFrame(frameAuswertung)
@@ -699,6 +721,28 @@ def AuswertungGaugeAnzeigen():
                                            command=root.quit,
                                            font=ctk.CTkFont(size=12, weight="bold"))
     buttonAuswertungBeenden.pack(side="left")
+    
+    def AmpelAnzeigenKategorie(frame, avg_score, title):
+    """Zeigt eine Ampel basierend auf dem Durchschnittswert einer Kategorie an."""
+    ampelFarbe = "grey"
+    if avg_score <= 2:
+        ampelFarbe = "red"
+    elif avg_score < 5:
+        ampelFarbe = "yellow"
+    else:
+        ampelFarbe = "green"
+
+    # Canvas für die Ampel
+    ampel_frame = ctk.CTkFrame(frame)
+    ampel_frame.pack(pady=(10, 10))
+    ampel_canvas = ctk.CTkCanvas(ampel_frame, width=60, height=180, bg="white", highlightthickness=0)
+    ampel_canvas.pack(pady=(10, 5))
+
+    # Drei Kreise für die Ampel
+    ampel_canvas.create_oval(10, 10, 50, 50, fill="red" if ampelFarbe == "red" else "#550000", outline="")
+    ampel_canvas.create_oval(10, 65, 50, 105, fill="yellow" if ampelFarbe == "yellow" else "#555500", outline="")
+    ampel_canvas.create_oval(10, 120, 50, 160, fill="green" if ampelFarbe == "green" else "#003300", outline="")
+    ampel_canvas.create_text(30, 170, text=title, font=("Arial", 10, "bold"))
 
 #endregion
 # Funktino zum serialisieren der Antworten und speichern in XML mit der dataclass Eintrag
