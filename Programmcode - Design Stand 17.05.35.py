@@ -108,13 +108,13 @@ frameAnmelden.lift()
     
 # Fallback ohne Bild
 labelAnmelden = ctk.CTkLabel(frameAnmelden, text="Anmelden!", 
-                          font=ctk.CTkFont(family="Geneva", size=25, weight="bold"),image=ctk_image, compound="center", text_color="black")
+                          font=ctk.CTkFont(family="TT Commons Pro", size=25, weight="bold"),image=ctk_image, compound="center", text_color="black")
 
 labelAnmelden.pack(pady=(30, 20))
 
 # Passwort-Label
 labelPasswort = ctk.CTkLabel(frameAnmelden, text="Bitte Passwort eingeben:", 
-                        font=ctk.CTkFont(family="Geneva", size=16), text_color="darkblue")
+                        font=ctk.CTkFont(family="TT Commons Pro", size=16), text_color="darkblue")
 labelPasswort.pack(pady=(0, 10))
 
 # Passwort-Eingabefeld mit Entry statt Text für bessere Usability
@@ -128,7 +128,7 @@ textPasswort.bind('<Return>', lambda event: buttonAnmelden_click())
 # Button mit verbessertem Styling
 buttonAnmelden = ctk.CTkButton(frameAnmelden, text="Anmelden", 
                   command=buttonAnmelden_click,
-                  font=ctk.CTkFont(family="Geneva",size=12, weight="bold"),
+                  font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"),
                   width=120, height=35)
 buttonAnmelden.pack(pady=10)
 #endregion
@@ -141,17 +141,17 @@ frameWillkommen.pack_propagate(False)
 
 #Willkomensüberschrift
 labelWillkommen = ctk.CTkLabel(frameWillkommen, text="Willkommen zur Mitarbeiterumfrage!", 
-                           font=ctk.CTkFont(family="Geneva",size=25, weight="bold"), text_color="black")
+                           font=ctk.CTkFont(family="TT Commons Pro",size=25, weight="bold"), text_color="black")
 labelWillkommen.pack(pady=(30, 20))
 
 #Willkommensnachricht
 labelWillkommenNachricht = ctk.CTkLabel(frameWillkommen, text="Im Folgenden wollen wir Sie ein wenig besser kennen lernen...",
-                                        font=ctk.CTkFont(family="Geneva",size=16), text_color="darkblue",)
+                                        font=ctk.CTkFont(family="TT Commons Pro",size=16), text_color="darkblue",)
 labelWillkommenNachricht.pack(pady=(20, 40))
 # Button zum Fortfahren
 buttonWillkommen = ctk.CTkButton(frameWillkommen, text="Weiter", 
                              command=buttonWillkommen_click,
-                             font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                             font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
 buttonWillkommen.pack(pady=(20, 0))
 #endregion
 
@@ -161,7 +161,7 @@ framePersoenlicheDaten = ctk.CTkFrame(frameStartseite, width=300, height=325, fg
 framePersoenlicheDaten.pack_propagate(False)
 
 LabelAbteilung = ctk.CTkLabel(framePersoenlicheDaten, text="Abteilung:", 
-                          font=ctk.CTkFont(family="Geneva",size=20), text_color="black")
+                          font=ctk.CTkFont(family="TT Commons Pro",size=20), text_color="black")
 LabelAbteilung.pack(pady=(20, 10))
 #DropDown für die Abteilung
 abteilungen = ["Vertrieb", "Marketing", "Entwicklung", "Support"]
@@ -170,7 +170,7 @@ abteilung_dropdown = ctk.CTkOptionMenu(framePersoenlicheDaten, variable=abteilun
 abteilung_dropdown.pack(pady=(0, 20))
 #dropdown welche Rolle im Unternehmen
 LabelRolle = ctk.CTkLabel(framePersoenlicheDaten, text="Rolle im Unternehmen:", 
-                      font=ctk.CTkFont(family="Geneva",size=20), text_color="black")
+                      font=ctk.CTkFont(family="TT Commons Pro",size=20), text_color="black")
 LabelRolle.pack(pady=(10, 10))
 rollen = ["Mitarbeiter", "Teamleiter", "Azubi/Praktikant"]
 rolle_var = ctk.StringVar(value=rollen[0])  # Standardwert
@@ -180,7 +180,7 @@ rolle_dropdown.pack(pady=(0, 20))
 #button weiter
 buttonPersönlicheDaten = ctk.CTkButton(framePersoenlicheDaten, text="Weiter", 
                                     command=buttonPersönlicheDaten_click,
-                                    font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                                    font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
 buttonPersönlicheDaten.pack(pady=(20, 0))
 #endregion
 
@@ -190,23 +190,23 @@ frameÜbergangFragebogen = ctk.CTkFrame(frameStartseite, width=750, height=250, 
 frameÜbergangFragebogen.pack_propagate(False) 
 #Übergangsüberschrift   
 labelÜbergang = ctk.CTkLabel(frameÜbergangFragebogen, text="Vielen Dank für Ihre Angaben!", 
-                          font=ctk.CTkFont(family="Geneva",size=20, weight="bold"), text_color="black")
+                          font=ctk.CTkFont(family="TT Commons Pro",size=20, weight="bold"), text_color="black")
 labelÜbergang.pack(pady=(30, 0))    
 
 #Übergangsnachricht
 labelÜbergangNachricht = ctk.CTkLabel(frameÜbergangFragebogen, text="Sie können nun mit dem Fragebogen fortfahren.",
-                                  font=ctk.CTkFont(family="Geneva",size=16),wraplength=600, text_color="darkblue")
+                                  font=ctk.CTkFont(family="TT Commons Pro",size=16),wraplength=600, text_color="darkblue")
 labelÜbergangNachricht.pack(pady=(10, 20))
 #Slider erklärung
 labelSliderErklärung = ctk.CTkLabel(frameÜbergangFragebogen, text="Bitte bewerten Sie die folgenden Aussagen auf einer Skala von 1 (stimme nicht zu) bis 5 (stimme voll zu):",
-                                font=ctk.CTkFont(family="Geneva",size=16),
+                                font=ctk.CTkFont(family="TT Commons Pro",size=16),
                                 wraplength=600, text_color="darkblue")
 labelSliderErklärung.pack(pady=(10, 20))    
 
 # Button zum Fortfahren zum Fragebogen
 buttonÜbergangFragebogen = ctk.CTkButton(frameÜbergangFragebogen, text="Zum Fragebogen", 
                                       command=buttonÜbergangFragebogen_click,
-                                      font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                                      font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
 buttonÜbergangFragebogen.pack(pady=(20, 0))
 #endregion
 
@@ -215,12 +215,12 @@ frameFragebogenKat1 = ctk.CTkFrame(frameStartseite, width=650, height=500, fg_co
 frameFragebogenKat1.pack_propagate(False)
 # Kategorieüberschrift
 labelFragebogenKat1 = ctk.CTkLabel(frameFragebogenKat1, text="Kategorie 1: Arbeitsumfeld und Zusammenarbeit", 
-                                font=ctk.CTkFont(family="Geneva",size=20, weight="bold"), text_color="black")
+                                font=ctk.CTkFont(family="TT Commons Pro",size=20, weight="bold"), text_color="black")
 labelFragebogenKat1.pack(pady=(30, 20))
 
 # Frage 1
 labelFrage1 = ctk.CTkLabel(frameFragebogenKat1, text="Ich fühle mich an meinem Arbeitsplatz wohl und sicher.",
-                       font=ctk.CTkFont(family="Geneva",size=14),
+                       font=ctk.CTkFont(family="TT Commons Pro",size=14),
                        wraplength=600, text_color="darkblue")
 labelFrage1.pack(pady=(10, 5))
 
@@ -238,7 +238,7 @@ sliderFrage1.pack(pady=(0, 20))
 
 # Frage 2
 labelFrage2 = ctk.CTkLabel(frameFragebogenKat1, text="Die Zusammenarbeit mit meinen Kollegen funktioniert gut.",
-                       font=ctk.CTkFont(family="Geneva",size=14),
+                       font=ctk.CTkFont(family="TT Commons Pro",size=14),
                        wraplength=600, text_color="darkblue")
 labelFrage2.pack(pady=(10, 5))
 
@@ -256,7 +256,7 @@ sliderFrage2.pack(pady=(0, 20))
 
 #frage 3
 labelFrage3 = ctk.CTkLabel(frameFragebogenKat1, text="Ich bekomme die Unterstützung, die ich für meine Arbeit benötige.", 
-                       font=ctk.CTkFont(family="Geneva",size=14),
+                       font=ctk.CTkFont(family="TT Commons Pro",size=14),
                        wraplength=600, text_color="darkblue")
 labelFrage3.pack(pady=(10, 5))
 
@@ -275,7 +275,7 @@ sliderFrage3.pack(pady=(0, 20))
 #button für nächste Kategorie
 buttonFragebogenKat1 = ctk.CTkButton(frameFragebogenKat1, text="Weiter zur nächsten Kategorie", 
                                  command=buttonFragebogenKat1_click,
-                                 font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                                 font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
 buttonFragebogenKat1.pack(pady=(20, 0))
 #endregion
 
@@ -285,12 +285,12 @@ frameFragebogenKat2.pack_propagate(False)
 
 #überschrift für die zweite Kategorie
 labelFragebogenKat2 = ctk.CTkLabel(frameFragebogenKat2, text="Kategorie 2: Kommunikation und Information",
-                                font=ctk.CTkFont(family="Geneva",size=20, weight="bold"), text_color="black")
+                                font=ctk.CTkFont(family="TT Commons Pro",size=20, weight="bold"), text_color="black")
 labelFragebogenKat2.pack(pady=(30, 20))
 
 # Frage 1
 labelFrage1Kat2 = ctk.CTkLabel(frameFragebogenKat2, text="Ich erhalte regelmäßig Informationen über wichtige Entwicklungen im Unternehmen.",
-                            font=ctk.CTkFont(family="Geneva",size=14),
+                            font=ctk.CTkFont(family="TT Commons Pro",size=14),
                             wraplength=600, text_color="darkblue")
 labelFrage1Kat2.pack(pady=(10, 5))
 
@@ -308,7 +308,7 @@ sliderFrage1Kat2.pack(pady=(0, 20))
 
 # Frage 2
 labelFrage2Kat2 = ctk.CTkLabel(frameFragebogenKat2, text="In meinem Arbeitsumfeld ist eine offene Meinungsäußerung möglich",
-                            font=ctk.CTkFont(family="Geneva",size=14),
+                            font=ctk.CTkFont(family="TT Commons Pro",size=14),
                             wraplength=600, text_color="darkblue")
 labelFrage2Kat2.pack(pady=(10, 5))
 
@@ -326,7 +326,7 @@ sliderFrage2Kat2.pack(pady=(0, 20))
 
 #frage 3
 labelFrage3Kat2 = ctk.CTkLabel(frameFragebogenKat2, text="Ich weiß, was von mir erwartet wird und welche Ziele ich verfolge.",
-                            font=ctk.CTkFont(family="Geneva",size=14),
+                            font=ctk.CTkFont(family="TT Commons Pro",size=14),
                             wraplength=600, text_color="darkblue")
 labelFrage3Kat2.pack(pady=(10, 5))
 
@@ -345,7 +345,7 @@ sliderFrage3Kat2.pack(pady=(0, 20))
 #weiter Button für die nächste Kategorie
 buttonFragebogenKat2 = ctk.CTkButton(frameFragebogenKat2, text="Weiter zur nächsten Kategorie",
                                     command=buttonFragebogenKat2_click,
-                                    font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                                    font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
 buttonFragebogenKat2.pack(pady=(20, 0))
 #endregion
 
@@ -356,12 +356,12 @@ frameFragebogenKat3.pack_propagate(False)
 
 # Kategorieüberschrift
 labelFragebogenKat3 = ctk.CTkLabel(frameFragebogenKat3, text="Kategorie 3: Entwicklung und Wertschätzung",
-                                font=ctk.CTkFont(family="Geneva",size=20, weight="bold"), text_color="black")
+                                font=ctk.CTkFont(family="TT Commons Pro",size=20, weight="bold"), text_color="black")
 labelFragebogenKat3.pack(pady=(30, 20))
 
 # Frage 1
 labelFrage1Kat3 = ctk.CTkLabel(frameFragebogenKat3, text="Meine Leistung wird anerkannt und wertgeschätzt.",
-                            font=ctk.CTkFont(family="Geneva",size=14),
+                            font=ctk.CTkFont(family="TT Commons Pro",size=14),
                             wraplength=600, text_color="darkblue")
 labelFrage1Kat3.pack(pady=(10, 5))
 
@@ -379,7 +379,7 @@ sliderFrage1Kat3.pack(pady=(0, 20))
 
 #Frage 2
 labelFrage2Kat3 = ctk.CTkLabel(frameFragebogenKat3, text="Ich sehe Möglichkeiten, mich fachlich oder persönlich weiterzuentwickeln.",
-                            font=ctk.CTkFont(family="Geneva",size=14),
+                            font=ctk.CTkFont(family="TT Commons Pro",size=14),
                             wraplength=600, text_color="darkblue")
 labelFrage2Kat3.pack(pady=(10, 5))
 
@@ -397,7 +397,7 @@ sliderFrage2Kat3.pack(pady=(0, 20))
 
 # Frage 3
 labelFrage3Kat3 = ctk.CTkLabel(frameFragebogenKat3, text="Ich bin stolz, Teil dieses Unternehmens zu sein.",
-                            font=ctk.CTkFont(family="Geneva",size=14),
+                            font=ctk.CTkFont(family="TT Commons Pro",size=14),
                             wraplength=600, text_color="darkblue")
 labelFrage3Kat3.pack(pady=(10, 5))
 
@@ -416,7 +416,7 @@ sliderFrage3Kat3.pack(pady=(0, 20))
 # Button zum Abschließen des Fragebogens
 buttonFragebogenKat3 = ctk.CTkButton(frameFragebogenKat3, text="Fragebogen abschließen",
                                     command=buttonFragebogenKat3_click,
-                                    font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                                    font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
 buttonFragebogenKat3.pack(pady=(20, 0))
 
 
@@ -429,23 +429,23 @@ frameFeedback = ctk.CTkFrame(frameStartseite, width=650, height=500, fg_color="w
 frameFeedback.pack_propagate(False)
 # Feedback-Überschrift
 labelFeedback = ctk.CTkLabel(frameFeedback, text="Vielen Dank für Ihre Teilnahme!",
-                          font=ctk.CTkFont(family="Geneva",size=20, weight="bold"), text_color="black")
+                          font=ctk.CTkFont(family="TT Commons Pro",size=20, weight="bold"), text_color="black")
 labelFeedback.pack(pady=(30, 0))        
 # Feedback-Nachricht
 labelFeedbackNachricht = ctk.CTkLabel(frameFeedback, text="Wir freuen uns über Ihr Feedback.",
-                                    font=ctk.CTkFont(family="Geneva",size=14), text_color="darkblue")
+                                    font=ctk.CTkFont(family="TT Commons Pro",size=14), text_color="darkblue")
 labelFeedbackNachricht.pack(pady=(10, 20))  
 
 #Text für optionales Feedback
 labelOptionalesFeedback = ctk.CTkLabel(frameFeedback, text="Optional: Haben Sie noch Anmerkungen oder Vorschläge?",
-                                    font=ctk.CTkFont(family="Geneva",size=14), text_color="darkblue")
+                                    font=ctk.CTkFont(family="TT Commons Pro",size=14), text_color="darkblue")
 labelOptionalesFeedback.pack(pady=(10, 0))
 textOptionalesFeedback = ctk.CTkTextbox(frameFeedback, height=100, width=400, font=ctk.CTkFont(size=12))
 textOptionalesFeedback.pack(pady=(0, 20))
 # Button zum Beenden der Umfrage und weiter zur Auswertung
 buttonFeedback = ctk.CTkButton(frameFeedback, text="Feedback abschließen und Auswertung anzeigen",
                             command=buttonFeedback_click,
-                            font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                            font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
 buttonFeedback.pack(pady=(20, 0))
 
 #endregion             
@@ -456,7 +456,7 @@ frameAuswertung = ctk.CTkFrame(frameStartseite, width=800, height=600, fg_color=
 frameAuswertung.pack_propagate(False)
 
 labelAuswertung = ctk.CTkLabel(frameAuswertung, text="Auswertung der Umfrage",
-                            font=ctk.CTkFont(family="Geneva",size=20, weight="bold"))
+                            font=ctk.CTkFont(family="TT Commons Pro",size=20, weight="bold"))
 labelAuswertung.pack(pady=(30, 0))
 
 # Auswertung anzeigen mit matplotlib Visualisierung
@@ -473,14 +473,14 @@ def AuswertungAnzeigen():
         result_text = "Vielen Dank für Ihre Teilnahme!\n\nIhre Antworten wurden gespeichert.\nFür eine Auswertung werden mehrere Teilnehmer benötigt."
         
         # Textfeld für die Nachricht
-        textAuswertung = ctk.CTkTextbox(frameAuswertung, height=200, width=600, font=ctk.CTkFont(family="Geneva",size=12))
+        textAuswertung = ctk.CTkTextbox(frameAuswertung, height=200, width=600, font=ctk.CTkFont(family="TT Commons Pro",size=12))
         textAuswertung.insert("0.0", result_text)
         textAuswertung.pack(pady=(20, 10))
         
         # Button zum Beenden der Umfrage
         buttonAuswertungBeenden = ctk.CTkButton(frameAuswertung, text="Umfrage beenden",
                                             command=root.quit,
-                                            font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                                            font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
         buttonAuswertungBeenden.pack(pady=(10, 0))
     else:
         # Durchschnittswerte für jede Kategorie berechnen
@@ -606,13 +606,13 @@ def AuswertungAnzeigen():
         # Button zum Beenden der Umfrage
         buttonAuswertungBeenden = ctk.CTkButton(button_frame, text="Umfrage beenden",
                                                 command=root.quit,
-                                                font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                                                font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
         buttonAuswertungBeenden.pack(side="left")
 
     
         buttonAuswertungBeenden = ctk.CTkButton(button_frame, text="Umfrage beenden",
                                            command=root.quit,
-                                           font=ctk.CTkFont(family="Geneva",size=12, weight="bold"))
+                                           font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
         buttonAuswertungBeenden.pack(side="left")
 
 #endregion
