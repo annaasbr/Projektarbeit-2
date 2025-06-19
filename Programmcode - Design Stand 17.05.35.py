@@ -425,7 +425,7 @@ buttonFragebogenKat3.pack(pady=(20, 0))
 #endregion
 
 #region Feedback 
-frameFeedback = ctk.CTkFrame(frameStartseite, width=650, height=500, fg_color="white", border_color="darkblue", border_width=2, corner_radius=1)
+frameFeedback = ctk.CTkFrame(frameStartseite, width=400, height=150, fg_color="white", border_color="darkblue", border_width=2, corner_radius=1)
 frameFeedback.pack_propagate(False)
 # Feedback-Überschrift
 labelFeedback = ctk.CTkLabel(frameFeedback, text="Vielen Dank für Ihre Teilnahme!",
@@ -437,11 +437,7 @@ labelFeedbackNachricht = ctk.CTkLabel(frameFeedback, text="Wir freuen uns über 
 labelFeedbackNachricht.pack(pady=(10, 20))  
 
 #Text für optionales Feedback
-labelOptionalesFeedback = ctk.CTkLabel(frameFeedback, text="Optional: Haben Sie noch Anmerkungen oder Vorschläge?",
-                                    font=ctk.CTkFont(family="TT Commons Pro",size=14), text_color="darkblue")
-labelOptionalesFeedback.pack(pady=(10, 0))
-textOptionalesFeedback = ctk.CTkTextbox(frameFeedback, height=100, width=400, font=ctk.CTkFont(size=12))
-textOptionalesFeedback.pack(pady=(0, 20))
+
 # Button zum Beenden der Umfrage und weiter zur Auswertung
 buttonFeedback = ctk.CTkButton(frameFeedback, text="Feedback abschließen und Auswertung anzeigen",
                             command=buttonFeedback_click,
@@ -639,7 +635,7 @@ def AntwortenSpeichern():
                 Frage3=round(sliderFrage3Kat3.get())
             )
         ),
-        Feedback=textOptionalesFeedback.get("0.0", "end").strip() or None,
+        Feedback=None,
         Zeitstempel=datetime.now()
     )
 
