@@ -431,12 +431,6 @@ frameFeedback.pack_propagate(False)
 labelFeedback = ctk.CTkLabel(frameFeedback, text="Vielen Dank für Ihre Teilnahme!",
                           font=ctk.CTkFont(family="TT Commons Pro",size=20, weight="bold"), text_color="black")
 labelFeedback.pack(pady=(30, 0))        
-# Feedback-Nachricht
-labelFeedbackNachricht = ctk.CTkLabel(frameFeedback, text="Wir freuen uns über Ihr Feedback.",
-                                    font=ctk.CTkFont(family="TT Commons Pro",size=14), text_color="darkblue")
-labelFeedbackNachricht.pack(pady=(10, 20))  
-
-#Text für optionales Feedback
 
 # Button zum Beenden der Umfrage und weiter zur Auswertung
 buttonFeedback = ctk.CTkButton(frameFeedback, text="Feedback abschließen und Auswertung anzeigen",
