@@ -43,7 +43,6 @@ gültige_passwörter = ["Umfrage01", "Umfrage02", "Umfrage03", "Umfrage04", "Umf
 def buttonAnmelden_click():
     pw = textPasswort.get()
     if pw in gültige_passwörter:
-        gültige_passwörter.remove(pw)  # Passwort aus Liste entfernen
         frameAnmelden.pack_forget()
         frameWillkommen.pack(expand=True, fill='both')
     else:
