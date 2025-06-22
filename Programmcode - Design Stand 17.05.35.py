@@ -432,7 +432,7 @@ labelFeedback = ctk.CTkLabel(frameFeedback, text="Vielen Dank für Ihre Teilnahm
 labelFeedback.pack(pady=(30, 0))        
 
 # Button zum Beenden der Umfrage und weiter zur Auswertung
-buttonFeedback = ctk.CTkButton(frameFeedback, text="Feedback abschließen und Auswertung anzeigen",
+buttonFeedback = ctk.CTkButton(frameFeedback, text="Umfrage abschließen und Auswertung anzeigen",
                             command=buttonFeedback_click,
                             font=ctk.CTkFont(family="TT Commons Pro",size=12, weight="bold"))
 buttonFeedback.pack(pady=(20, 0))
